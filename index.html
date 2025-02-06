@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edge Case Testing</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+      }
+      .container {
+        width: 60%;
+        margin: auto;
+      }
+      iframe {
+        width: 100%;
+        height: 400px;
+        border: none;
+        margin-top: 20px;
+      }
+      img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        margin-top: 20px;
+      }
+      .long-text {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Edge Case Testing</h1>
+      <p>Testing various edge cases to find breaking points.</p>
+      
+      <!-- Multiple iframes -->
+      <iframe src="https://westeros.rolustech.com:44333/page/ea5d2c3c-c59f-4233-85de-46e7834bd837"></iframe>
+      <iframe src="https://example.com/non-existent-page"></iframe>
+      
+      <!-- Broken Image -->
+      <img src="https://example.com/broken-image.xyz" alt="Broken Image" />
+      
+      <!-- Huge iframe -->
+      <iframe src="https://www.wikipedia.org" height="5000px"></iframe>
+      
+      <!-- Overloaded YouTube Videos -->https://vimeo.com/1051677326
+
+      <iframe width="560" height="315" src="https://vimeo.com/1051677326" frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/B1nkNzrUVeg" frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/1SGg3QxYvS0" frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/NixGgQJITOg" frameborder="0" allowfullscreen></iframe>
+       <iframe width="560" height="315" src="https://vimeo.com/anhphitran/thegioifilm?share=copy" frameborder="0" allowfullscreen></iframe>
+      <!-- Long overflowing text -->
+      <p class="long-text">This is a very long text that should ideally be tested for overflow behavior when it exceeds the container width. Will it break?</p>
+      
+      <!-- Form inside iframe -->
+      <iframe src="https://www.w3schools.com/html/html_forms.asp"></iframe>
+      
+      <!-- Malformed Script -->
+      <script src="https://example.com/fake-script.js"></script>
+      
+      <!-- XSS Testing (This should NOT execute) -->
+      <p><script>alert('XSS Test')</script></p>
+    </div>
+    
+    <!-- Chatbot Script -->
+    <script src="https://staging.webchatbot.ai/script.js"
+    data-name="webChatBot"
+    data-address="https://staging.webchatbot.ai"
+    data-id="7a20a386-b1ec-4e92-862a-a34f2172b14c"
+    data-widget-size="normal"
+    data-widget-button-size="normal"
+    data-widget-offset-bottom="0px"
+    data-widget-offset-right="0px"
+    data-movable=false
+    data-ignore-paths=""
+    data-placement="right"
+    defer
+    ></script>
+  </body>
+</html>
